@@ -8,6 +8,7 @@ dependencies = [
     "langchain>=1.2.16",
     "langchain-openai>=1.2.1",
     "langgraph>=1.1.10",
+    "langgraph-cli>=0.4.24",
 ]
 
 [dependency-groups]
