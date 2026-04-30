@@ -45,3 +45,6 @@ Thumbs.db
 # Local DB
 *.sqlite3
 *.db
+
+# Langchain
+.langgraph_api
