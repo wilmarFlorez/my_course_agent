@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "langchain>=1.2.16",
+    "langchain-anthropic>=1.4.2",
     "langchain-openai>=1.2.1",
     "langgraph>=1.1.10",
     "langgraph-cli>=0.4.24",
@@ -13,6 +14,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "grandalf>=0.8",
     "ipykernel>=7.2.0",
     "langgraph-cli[inmem]>=0.4.24",
     "mypy>=1.20.2",
@@ -34,3 +36,7 @@ select = [
     # isort
     "I",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
