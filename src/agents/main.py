@@ -12,5 +12,3 @@ agent = create_agent(
     tools=[get_weather],
     system_prompt="You are a helpful assistant",
 )
-
-
