@@ -49,7 +49,17 @@ notebooks/             # Jupyter notebooks for experimentation
    uv sync
    ```
 
-3. **Configure environment variables**
+3. **Install the project as an editable package**
+
+   ```bash
+   uv pip install -e .
+   ```
+
+   This registers the project in the virtual environment so that relative imports (e.g. `from .prompt import SYSTEM_PROMPT`) are resolved correctly at runtime and by Pylance/Pyright in VS Code. Only needs to be run once after cloning.
+
+   > **VS Code / Pylance**: a `pyrightconfig.json` file at the project root points Pylance to the `.venv` folder. If you still see import errors after running the command above, reload the VS Code window (`Ctrl+Shift+P` → *Reload Window*).
+
+4. **Configure environment variables**
 
    ```bash
    cp .env.example .env
