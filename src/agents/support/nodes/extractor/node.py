@@ -20,9 +20,10 @@ llm_with_structured_output = llm.with_structured_output(schema=ContactInfo)
 
 def extractor(state: State):
     new_state: State = {}
+    history = state["messages"]
 
     response_schema = llm_with_structured_output.invoke(
-        [("system", SYSTEM_PROMPT), ("user", state["messages"])]
+        [("system", SYSTEM_PROMPT)] + history
     )
     new_state["customer_name"] = response_schema.name
     new_state["phone"] = response_schema.phone
