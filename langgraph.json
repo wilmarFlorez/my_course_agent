@@ -7,7 +7,8 @@
         "support": "./src/agents/support/agent.py:agent",
         "booking": "./src/agents/support/nodes/booking/node.py:booking_node",
         "code_review": "./src/agents/code_review.py:agent",
-        "orchestator": "./src/agents/orchestator.py:graph"
+        "orchestator": "./src/agents/orchestator.py:graph",
+        "eval-optimizer": "./src/agents/evaluator-optimizer.py:optimizer_workflow"
     },
     "env": ".env"
 }

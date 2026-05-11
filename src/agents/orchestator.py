@@ -1,7 +1,6 @@
 import operator
 from typing import Annotated, TypedDict, cast
 
-from IPython.display import Image, Markdown, display
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
@@ -9,7 +8,7 @@ from langgraph.types import Send
 from pydantic import BaseModel, Field
 
 llm = ChatAnthropic(model="claude-haiku-4-5", temperature=0)
-llm_worker = ChatAnthropic(model="claude-haiku-4-5", temperature=0, max_tokens=120)
+llm_worker = ChatAnthropic(model="claude-haiku-4-5", temperature=0, effort='medium')
 
 
 class Section(BaseModel):
